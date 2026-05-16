@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "multiplatform_wheel"
+version = "0.1.0"
+description = "A package embedding an OS-specific dynamic library"
+dependencies = []
+
+# Configure Hatch to use our custom build hook script
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "hatch_build.py"
